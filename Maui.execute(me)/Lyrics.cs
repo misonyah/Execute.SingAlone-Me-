@@ -196,7 +196,7 @@ internal static partial class world
         await animateTextAsync("4:23 P.M 22/10/2023", "[World] Updating Time: ", "", 5, false);
 
         await Timing(1, 35, 84);
-        await slowTypeAsync("Oh, switch my role \x1b[31mS to M\x1b[0m", 85, true, 1, "");
+        await slowTypeAsync("Oh, switch my role to \x1b[31mS to M\x1b[0m", 75, true, 1, "");
         await slowTypeAsync("me.toggleLovable())", 55, true, 0, "yellow");
         await Timing(1, 39, 43);
         await slowTypeAsync("So we can enter the trance, the trance", 60, true, 0, "");
@@ -236,7 +236,7 @@ internal static partial class world
         await Timing(2, 2, 15);
         await slowTypeAsync("Then maybe,", 80, true, 0, "");
         await Timing(2, 2, 96);
-        await slowTypeAsync("then maybe, you won't leave me so disheartened", 70, true, 1, "");
+        await slowTypeAsync("then maybe, you won't leave me so disheartened", 60, true, 1, "");
         await slowTypeAsync("Challenging your God", 100, true, 1, "");
         await animateTextAsync("$@$%)#()#*)#*^^#(", "[Console] ", "red", 5, false);
         await slowTypeAsync("You have made some ILLEGAL ARGUMENTS *", 93, true, 0, "red");
