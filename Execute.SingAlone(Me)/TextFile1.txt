@@ -15,8 +15,8 @@
             readFile("textFiles/getError");
             Console.ResetColor();
             animateText("world.toggleValidity(false)", "", "yellow", 3, false);
-            animateText("world.toggleTelementary(false)", "", "yellow", 3, false);
-            simulateLoading(" Applyting World Settings",10,10);
+            animateText("world.toggleTelemetry(false)", "", "yellow", 3, false);
+            simulateLoading(" Applying World Settings",10,10);
             slowType("Setup our new world", 40, true, 0, "");
             animateText("World world = new World(5);", "", "yellow", 1, false);
             animateText("world.addThing(me);", "", "yellow", 1, false);
@@ -57,12 +57,12 @@
             slowType("So dizzy", 120, true, 0, "");
             animateText("world.disableWarnings()","","yellow", 5, false);
             slowType("Oh, we can travel to... ", 80, true, 0, "");
-            slowType("AB to BC", 120, true, 0, "");
+            slowType("AD to BC", 120, true, 0, "");
             animateText("Year: 2332 BC", "[World] Setting Date to: ", "", 5, false);
             List<string> timeTravel = new List<string> { "[World] Setting Locations:████████████ ", "[World]: Setting Locations: BABY████████████ ", "[World]: Setting Locations: BABYLON, Year: 2332 B.C " };
             encryptWall(1, timeTravel);
             slowType("And we can unite to", 70, true, 0, "");
-            readFile("textFiles/getDeeply1");
+            readFile("textFiles/getDeeply");
             slowType("soo deeply,", 80, true, 0, "");
             animateText("me.addLover('you')", "", "yellow", 3, false);
             slowType("soo deeply", 80, true, 0, "");
@@ -98,7 +98,7 @@
             animateText("[REDACTED] as Owner", "[World] Set player ", "", 2, false);
             animateText("[REDACTED] as Owner", "[World] Set player ", "", 2, false);
             slowType("then you're the proof of my ", 50, false, 0, "");
-            animateText("E X I S T A N C E", "[World] Set player", "red", 3, false);
+            animateText("E X I S T E N C E", "[World] Set player", "red", 3, false);
             slowType("Switch my gender to \u001b[31mF to M\u001b[0m", 75, true, 0, "");
             animateText("Male", "[World] Set player's gender:", "", 3, false);
             slowType("And then do whatever from \u001b[31mAM to PM\u001b[0m", 70, true, 1, "");

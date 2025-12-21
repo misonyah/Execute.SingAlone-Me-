@@ -11,7 +11,7 @@ using System.CodeDom.Compiler;
 
 namespace Execute.SingAlone_Me_
 {
-    internal  static class world
+    internal static class world
     {
         public static void readFile(string fileName)
         {
@@ -124,7 +124,7 @@ namespace Execute.SingAlone_Me_
 
 
         }
-        public static void slowType2(string text,string name, int delayMilliseconds, bool newLine, int spaceNumber, string color)
+        public static void slowType2(string text, string name, int delayMilliseconds, bool newLine, int spaceNumber, string color)
         {
             TimeSpan delay = TimeSpan.FromMilliseconds(delayMilliseconds);
             Console.ForegroundColor = ConsoleColor.Green;
@@ -143,7 +143,7 @@ namespace Execute.SingAlone_Me_
                     Console.ForegroundColor = ConsoleColor.Red;
                     break;
             }
-            Console.Write(name+ " ");
+            Console.Write(name + " ");
             foreach (char c in text)
             {
                 Console.Write(c);
@@ -164,25 +164,25 @@ namespace Execute.SingAlone_Me_
 
         public static void worldExecuteMe()
         {
-            slowType("Switch on the Power Line", 50,true,0,"");
+            slowType("Switch on the Power Line", 50, true, 0, "");
             readFile("textFiles/logoRhine");
             slowType("Remember to Put on -- P R O T E C T I O N", 50, true, 2, "");
             Console.WriteLine("\u001b[33m>encryptEnigma();\u001b[0m");
-            simulateLoading("Encryption Set",20,10);
+            simulateLoading("Encryption Set", 20, 10);
             Console.WriteLine("");
             slowType("Lay down your pieces and let's begin \u001b[33m objectCreation(); \u001b[0m", 50, true, 0, "");
-            animateText("[Console]Fill in my data.", "", "green", 5,false);
+            animateText("[Console]Fill in my data.", "", "green", 5, false);
             readFile("textFiles/createObject");
             slowType("Parameters. ", 70, true, 0, "");
             List<string> listy = new List<string> { "bVJijcss", "ijcssjzpTjH9no@K-emz", "1+Rza-<cT+G\"sC6IhJci!b ", "8V!g8WFkHzm<", "9no@K-emz", "56.23.15  >> Rotors ON " };
-            encryptWall(3,listy);
+            encryptWall(3, listy);
             slowType("Initialization.", 60, true, 0, "");
             Console.ForegroundColor = ConsoleColor.Red;
             readFile("textFiles/getError");
             Console.ResetColor();
             animateText("world.toggleValidity(false)", "", "yellow", 3, false);
-            animateText("world.toggleTelementary(false)", "", "yellow", 3, false);
-            simulateLoading(" Applyting World Settings",10,10);
+            animateText("world.toggleTelemetry(false)", "", "yellow", 3, false);
+            simulateLoading(" Applying World Settings", 10, 10);
             slowType("Setup our new world", 40, true, 0, "");
             animateText("World world = new World(5);", "", "yellow", 1, false);
             animateText("world.addThing(me);", "", "yellow", 1, false);
@@ -212,23 +212,23 @@ namespace Execute.SingAlone_Me_
             slowType("If I approach infinty", 70, true, 0, "");
             animateText("[Console] then you can be my limitations", "", "green", 10, true);
             List<string> infinity = new List<string> { " 22145432389", "    32312421424242", "     4124143545433", "       █████████", "         ███████████████", "you.appplyLimitation(me,int.max);" };
-            encryptWall(1, infinity);   
+            encryptWall(1, infinity);
             slowType("Switch my Current", 80, true, 0, "");
             List<string> ACDC = new List<string> { "DC ---> AC", "Conve", "Converting...", "Converting.. to AC to DC", "████████████████████████████████████ 98%   ", "               Converted AC to DC               " };
-            encryptWall(1, ACDC);           
+            encryptWall(1, ACDC);
             slowType("And then blind my Vision", 70, true, 0, "");
             slowType("So dizzy,", 120, true, 0, "");
             animateText("WARNING: Setting me.toggleVision() OFF will ----", "", "yellow", 5, false);
             animateText("WARNING: Setting me.toggleVision() OFF will ----", "", "yellow", 5, false);
             slowType("So dizzy", 120, true, 0, "");
-            animateText("world.disableWarnings()","","yellow", 5, false);
+            animateText("world.disableWarnings()", "", "yellow", 5, false);
             slowType("Oh, we can travel to... ", 80, true, 0, "");
-            slowType("AB to BC", 120, true, 0, "");
+            slowType("AD to BC", 120, true, 0, "");
             animateText("Year: 2332 BC", "[World] Setting Date to: ", "", 5, false);
             List<string> timeTravel = new List<string> { "[World] Setting Locations:████████████ ", "[World]: Setting Locations: BABY████████████ ", "[World]: Setting Locations: BABYLON, Year: 2332 B.C " };
             encryptWall(1, timeTravel);
             slowType("And we can unite to", 70, true, 0, "");
-            readFile("textFiles/getDeeply1");
+            readFile("textFiles/getDeeply");
             slowType("soo deeply,", 80, true, 0, "");
             animateText("me.addLover('you')", "", "yellow", 3, false);
             slowType("soo deeply", 80, true, 0, "");
@@ -241,7 +241,7 @@ namespace Execute.SingAlone_Me_
             slowType("Then I can, then I can be your only S A S T I F A C T I O N", 40, true, 0, "");
             animateText("world.removeCharacters('all','nonEssential');", "", "yellow", 3, false);
             animateText("[REDACTED]", "[World] Deleting Character: ", "", 2, false);
-            animateText("[REDACTED]", "[World] Deleting Character: ","", 2, false);
+            animateText("[REDACTED]", "[World] Deleting Character: ", "", 2, false);
             slowType("If I can make you happy,", 50, true, 0, "");
             slowType("I will run the  \u001b[31mworld.execution();\u001b[0m", 50, true, 0, "");
             animateText("Simulation already Active", "[World] ", "", 2, false);
@@ -264,7 +264,7 @@ namespace Execute.SingAlone_Me_
             animateText("[REDACTED] as Owner", "[World] Set player ", "", 2, false);
             animateText("[REDACTED] as Owner", "[World] Set player ", "", 2, false);
             slowType("then you're the proof of my ", 50, false, 0, "");
-            animateText("E X I S T A N C E", "[World] Set player", "red", 3, false);
+            animateText("E X I S T E N C E", "[World] Set player", "red", 3, false);
             slowType("Switch my gender to \u001b[31mF to M\u001b[0m", 75, true, 0, "");
             animateText("Male", "[World] Set player's gender:", "", 3, false);
             slowType("And then do whatever from \u001b[31mAM to PM\u001b[0m", 70, true, 1, "");
@@ -346,7 +346,7 @@ namespace Execute.SingAlone_Me_
         }
         public static void Sustain()
         {
-        
+
         }
         public static void simulateLoading(string message, int delayAmount, int barAmount)
         {
@@ -359,7 +359,7 @@ namespace Execute.SingAlone_Me_
                 Console.Write("\r{0} {1}%", progressBar, i * 100 / 10);
                 Thread.Sleep(delay);
             }
-            Console.Write(message +'\n');
+            Console.Write(message + '\n');
         }
         static char[] shuffleWords(string unshuffled)
         {
@@ -381,14 +381,14 @@ namespace Execute.SingAlone_Me_
             int totalBars = 69;
             int delay = 187;
             string[] phrases = { "Adding. 'You' and 'Me'.", "Generating the Universe", "Adding Star and Moons..", "Crafting the Narrative." };
-            Random random = new Random();         
+            Random random = new Random();
             Console.WriteLine("████████Generating World████████");
             readFile("textFiles/generatingWorld" + worldtype);
             Console.WriteLine("Seed ID: 03108891624980232");
             for (int i = 0; i <= totalBars; i++)
             {
                 string randomPhrase = phrases[random.Next(phrases.Length)];
-                string progressBar =   randomPhrase+" [" + new string('#', i) + new string('-', totalBars - i) + "]";
+                string progressBar = randomPhrase + " [" + new string('#', i) + new string('-', totalBars - i) + "]";
                 double percent = Math.Ceiling(i * 10 / 6.9);
                 Console.Write("\r{0} {1}%", progressBar, percent);
                 Thread.Sleep(delay);
@@ -418,9 +418,10 @@ namespace Execute.SingAlone_Me_
 
         public static void encryptWall(int loopAmount, List<string> wordBlock)
         {
-            
-            int sleepAmount = (int)Math.Ceiling((double)100/loopAmount);
-            for (int i = 0; i < loopAmount ; i++) {
+
+            int sleepAmount = (int)Math.Ceiling((double)100 / loopAmount);
+            for (int i = 0; i < loopAmount; i++)
+            {
                 int count2 = 0;
                 foreach (string c in wordBlock)
                 {
@@ -431,15 +432,15 @@ namespace Execute.SingAlone_Me_
                 }
                 Console.WriteLine();
             }
-            
+
         }
-        public static void animateText(string animateWord, string actorTalk ,string color, int loops, bool sepColor)
+        public static void animateText(string animateWord, string actorTalk, string color, int loops, bool sepColor)
         {
             Console.Write("\r");
-            for (int a = 0; a < loops ; a++)
-            {          
+            for (int a = 0; a < loops; a++)
+            {
                 string cc = new string(shuffleWords(animateWord));
-                Console.Write(actorTalk + "" + cc +"\r");
+                Console.Write(actorTalk + "" + cc + "\r");
                 Thread.Sleep(50);
             }
             switch (color)
@@ -451,7 +452,7 @@ namespace Execute.SingAlone_Me_
                     Console.ForegroundColor = ConsoleColor.Cyan;
                     break;
                 case "yellow":
-                    Console.ForegroundColor = ConsoleColor.Yellow; 
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     break;
                 case "red":
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -459,7 +460,7 @@ namespace Execute.SingAlone_Me_
             }
             if (sepColor)
             {
-                Console.Write("\r" + actorTalk + " " + "\u001b[33m"+ animateWord + "\u001b[0m");
+                Console.Write("\r" + actorTalk + " " + "\u001b[33m" + animateWord + "\u001b[0m");
             }
             else
             {
