@@ -263,7 +263,7 @@ internal static partial class world
 
         await Timing(2, 39, 0);
         WorldInterface.Clear();
-        await slowTypeAsync("Ein, dos, trois,  , fem,  , EXECUTION", 70, true, 0, "red");
+        await slowTypeAsync("Ein, dos, trois, nes, fem, liu, EXECUTION", 70, true, 0, "red");
         WorldInterface.Write("\x1b[31m"); // red
         await readFileAsync("textFiles/getError");
         await readFileAsync("textFiles/getError2");

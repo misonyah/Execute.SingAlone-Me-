@@ -151,7 +151,7 @@
             slowType("EXECUTION", 110, true, 0, "red");
             slowType("EXECUTION", 110, true, 0, "red");
             Console.Clear();
-            slowType("Ein, dos, trois,  , fem,  , EXECUTION", 70, true, 0, "red");
+            slowType("Ein, dos, trois, nes, fem, liu, EXECUTION", 70, true, 0, "red");
             Console.ForegroundColor = ConsoleColor.Red;
             readFile("textFiles/getError");
             readFile("textFiles/getError2");
