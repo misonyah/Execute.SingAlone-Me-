@@ -32,7 +32,7 @@ public static class WorldInterface
         if (_ansiParser == null || _buffer == null) return;
 
         _ansiParser.Write(text, _buffer, ref x, ref y);
-        RequestRedraw();
+        // RequestRedraw();
     }
 
     public static void Write(char c)
@@ -60,7 +60,7 @@ public static class WorldInterface
         x = 0;
         y = 0;
 
-        RequestRedraw();
+        // RequestRedraw();
     }
 
 
@@ -71,12 +71,12 @@ public static class WorldInterface
 
     // ---- Helpers ----
 
-    private static void RequestRedraw()
-    {
-        MainThread.BeginInvokeOnMainThread(() =>
-        {
-            // _view?.Invalidate();
-            _console?.InvalidateSurface();
-        });
-    }
+    // private static void RequestRedraw()
+    // {
+    //     MainThread.BeginInvokeOnMainThread(() =>
+    //     {
+    //         // _view?.Invalidate();
+    //         _console?.InvalidateSurface();
+    //     });
+    // }
 }
