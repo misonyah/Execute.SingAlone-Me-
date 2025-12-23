@@ -1,6 +1,13 @@
-using NAudio.Wave;
+using System.Runtime.CompilerServices;
+using SoundFlow.Abstracts.Devices;
+using SoundFlow.Backends.MiniAudio;
+using SoundFlow.Components;
+using SoundFlow.Providers;
+using SoundFlow.Structs;
+
 
 namespace World.Execute;
+
 
 public static class WorldRuntime
 {
@@ -16,12 +23,13 @@ public static class WorldRuntime
         await Task.Delay(2000);
         WorldInterface.Clear();
 
-        var musicFile = Music.WorldExecuteMeSongFile();
-
-        var songTask = PlayMusicAsync(musicFile);
+        var song = await createSong();
+        var songTask = song.executeSong();
         var worldTask = world.worldExecuteMeAsync();
 
         await Task.WhenAll(songTask, worldTask);
+
+        song.Dispose();
 
         WorldInterface.Run();
     }
@@ -51,19 +59,72 @@ public static class WorldRuntime
         }
     }
 
-
-    private static Task PlayMusicAsync(string musicFile)
+    public class Song : IDisposable
     {
-        return Task.Run(() =>
+        public MiniAudioEngine? engine;
+        public AudioPlaybackDevice? outputDevice;
+        public StreamDataProvider? provider;
+        public SoundPlayer? player;
+
+        public void Dispose()
         {
-            using var audioRender = new AudioFileReader(musicFile);
-            using var outputDevice = new WaveOutEvent();
+            if (player != null)
+            {
+                player.Dispose();
+                player = null;
+            }
+            if (provider != null)
+            {
+                provider.Dispose();
+                provider = null;
+            }
+            if (outputDevice != null)
+            {
+                outputDevice.Dispose();
+                outputDevice = null;
+            }
+            if (engine != null)
+            {
+                engine.Dispose();
+                engine = null;
+            }
+        }
 
-            outputDevice.Init(audioRender);
-            outputDevice.Play();
+        public async Task executeSong()
+        {
+            if (player == null)
+                return;
 
-            while (outputDevice.PlaybackState == PlaybackState.Playing)
-                Thread.Sleep(1);
+            var tcs = new TaskCompletionSource();
+            player?.PlaybackEnded += (s, e) =>
+            {
+                tcs.TrySetResult();
+            };
+            player?.Play();
+
+            await tcs.Task;
+        }
+    }
+
+    public static async Task<Song> createSong()
+    {
+        var song = new Song();
+
+        song.engine = new MiniAudioEngine();
+
+        song.outputDevice = song.engine.InitializePlaybackDevice(song.engine.PlaybackDevices.FirstOrDefault(x => x.IsDefault), AudioFormat.Cd);
+        song.outputDevice.Start();
+
+        var fileStream = await FileSystem.OpenAppPackageFileAsync("ghost.mp3");
+
+        song.provider = new StreamDataProvider(song.engine, fileStream, new SoundFlow.Metadata.Models.ReadOptions
+        {
+            DurationAccuracy = SoundFlow.Metadata.Models.DurationAccuracy.AccurateScan
         });
+
+        song.player = new SoundPlayer(song.engine, song.outputDevice.Format, song.provider);
+        song.outputDevice.MasterMixer.AddComponent(song.player);
+
+        return song;
     }
 }
