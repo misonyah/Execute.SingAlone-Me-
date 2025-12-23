@@ -131,12 +131,10 @@ public sealed class TerminalView : SKCanvasView
                 if (cell.Char == '\0' || cell.Char == ' ')
                     continue;
 
-                float flicker =
-                    0.92f +
-                    0.08f * MathF.Sin(time * 55f + x * 0.6f + y * 1.1f);
-
-                var col = cell.Fg.ToSKColor()
-                    .WithAlpha((byte)(255 * flicker));
+                float wave = MathF.Sin(-time * 3.0f + y * 1.0f) * 0.4f + 0.6f;
+                var col = cell.Fg.ToSKColor().WithAlpha(
+                    (byte)(wave * 255)
+                );
 
                 _fgPaint.Color = col;
                 _bloomPaint.Color = col.WithAlpha(96);
